@@ -1,6 +1,6 @@
 <!DOCTYPE html>
     <head>
-        <title>Criptografía Cuántica</title>
+        <title id="cripto">Criptografía Cuántica</title>
     </head>
 
     <body>
@@ -15,14 +15,45 @@
 
         <h2>Índice</h2>
         <ul>
-            <li>Criptografía Cuántica</li>
+            <li><a href="#cripto">Criptografía Cuántica</a></li>
             <ul>
-                
+                <li><a href="#conceptos">Conceptos básicos</a></li>
+                <li>
+                    <a href="#intercambio">Intercambio de claves cuánticas</a>
+                    <ul>
+                        <li>
+                            <a href="#protoGen">Protocolo general</a>
+                            <ul>
+                                <li><a href="#deteEsp">Detección de espionaje</a></li>
+                                <li>
+                                    <a href="#infoSec">Información secreta</a>
+                                    <ul>
+                                        <li><a href="#recoInfo">Reconciliación de información</a></li>
+                                        <li><a href="#ampli">Amplificación de la privacidad</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <li><a href="#protoBB8">Protocolo BB84</a></li>
+                            <li><a href="#protoB92">Protocolo B92</a></li>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#algoCripto">Algoritmos en la criptografía cuántica</a></li>
+                <li><a href="#algoEncripto">Algoritmos de encriptación</a></li>
+                <li>
+                    <a href="#imple">Implementación de la criptografía cuántica</a>
+                    <ul>
+                        <li><a href="#exp">Experimentañ</a></li>
+                        <li><a href="#com">Comercial</a></li>
+                    </ul>
+                </li>
+                <li><a href="#refe">Referencias</a></li>
+
             </ul>
         </ul>
 
 
-        <h2>Conceptos básicos</h2>
+        <h2 id="conceptos">Conceptos básicos</h2>
         <p>
             La criptografía es la disciplina que trata de la transmisión y almacenamiento de datos de manera que no puedan ser comprendidos ni modificados por terceros. Los diferentes métodos de criptografía actualmente utilizados necesitan que dos personas que deseen comunicar información intercambien de forma segura una o más claves; una vez que las claves han sido intercambiadas, los interlocutores pueden transferir información con un nivel de seguridad conocido. Pero esta forma de trabajar basa la seguridad de las transmisiones exclusivamente en el intercambio de claves. La forma más segura de realizar este intercambio de claves es de manera presencial, pero ello no es posible en la mayoría de los casos, dado el múltiple número de interlocutores con los que se desea intercambiar información confidencial (bancos, tiendas en Internet, colegas de trabajo en sedes distantes, etcétera). De manera que el punto donde hay menor seguridad en el intercambio de información confidencial está en el proceso de intercambio y transmisión de las claves.
             La mecánica cuántica describe la dinámica de cada partícula cuántica (fotones, electrones, etc.) en términos de estados cuánticos, asignando una probabilidad a cada posible estado de la partícula por medio de una función.
@@ -41,7 +72,7 @@
         </p>
 
         <div>
-             <h2>Intercambio de claves cuánticas</h2>
+             <h2 id="intercambio">Intercambio de claves cuánticas</h2>
              <p>
                 El intercambio de claves cuánticas (QKD, del inglés "quantum key distribution", distribución cuántica de claves) es un método de comunicación seguro que implementa un protocolo criptográfico utilizando propiedades de la mecánica cuántica. Permite que dos partes produzcan una clave secreta aleatoria compartida que solo ellos conocen, que luego puede usarse para cifrar y descifrar mensajes.
                 Una propiedad importante y única de la QKD es la capacidad de los dos usuarios que se comunican para detectar la presencia de un tercero que intenta obtener conocimiento de la clave. Esto resulta de un aspecto fundamental de la mecánica cuántica: el proceso de medición de un sistema cuántico en general perturba el sistema. Un tercero que intente espiar la clave debe de alguna manera medirla, introduciendo así anomalías detectables. Mediante el uso de superposiciones cuánticas o entrelazamiento cuántico y transmisión de información en estados cuánticos, se puede implementar un sistema de comunicación que detecte la escucha. Si el nivel de escucha está por debajo de un cierto umbral, se puede producir una clave que se garantiza que es segura (es decir, el espía no tiene información al respecto), de lo contrario, no es posible una clave segura y se interrumpe la comunicación.
@@ -56,7 +87,7 @@
              <img src = "C:\Users\Alumno\Documents\mi_wiki_Oggier\imagenes\ejemplo des-cripto.png" alt = "Ejemplo desencriptación" height="200">
 
              <div>
-                 <h3>Protocolo general</h3>
+                 <h3 id="protoGen">Protocolo general</h3>
                   <p>
                         La información cuántica permite que un emisor (Alice) envíe un mensaje a un receptor (Bob). Para ello disponen de lo siguiente
                         <ul>
@@ -74,7 +105,7 @@
                         No obstante, existen algunos algoritmos cuya seguridad está demostrada matemáticamente (como el cifrado de Vernam), o se basan en la complejidad de descifrarlo sin la clave secreta (sistema RSA, cuya seguridad no está rigurosamente probada). Algoritmos tales como el de Vernam y RSA son los más empleados hoy en día.
                     </p>
 
-                    <h4>Detección de espionaje</h4>
+                    <h4 id="deteEsp">Detección de espionaje</h4>
                     <p>
                         La información clásica puede ser copiada sin que la información original se vea modificada. Por ello, trabajando con sistemas de comunicación clásicos no se puede saber con certeza si un mensaje ha sido manipulado por una tercera parte. Dicho de otro modo, en física clásica, Eva puede espiar y manipular el mensaje que Alice envía a Bob sin que ellos puedan descubrirlo.
                         Sin embargo, en mecánica cuántica el hecho de medir hace que el estado cuántico inicial se perturbe, se modifique. Esto se traduce en que si Eva intercepta el mensaje, Alice y Bob pueden descubrirlo fácilmente. Este hecho viene garantizado por:
@@ -86,7 +117,7 @@
                         Se puede demostrar que existe una relación entre la cantidad de anomalías introducidas en el mensaje y la cantidad de información que Eva ha interceptado, de esta manera es posible saber, no solo que Eva ha interceptado información, sino también la cantidad. Esta inspección es posible llevarla a cabo con las llamadas pruebas de seguridad, que combinan las leyes de la física cuántica y de la teoría de la información.
                     </p>
 
-                    <h4>Información secreta</h4>
+                    <h4 id="infoSec">Información secreta</h4>
                     <p>
                         Primero, Alice y Bob evalúan el nivel de error y ruido que separan los dos conjuntos de datos. Las diferencias entre estos pueden provenir de:
                         <ul>
@@ -100,14 +131,14 @@
                         En el caso en el que la información secreta, &Delta;I, sea superior a cero, Alice y Bob pueden empezar la extracción de la clave. Alice y Bob no comparten todavía una clave, sino datos correlacionados.
                         La extracción se compone por dos etapas: la reconciliación y la amplificación de la confidencialidad.
                     </p>
-                    <h5>Reconciliación de información</h5>
+                    <h5 id="recoInfo">Reconciliación de información</h5>
                     <p>
                         La reconciliación de información es una forma de corrección de errores realizada entre las claves de Alice y Bob, para garantizar que ambas claves sean idénticas. Se lleva a cabo a través del canal público y, como tal, es vital minimizar la información enviada sobre cada clave, ya que Eva puede leerla.
                         Un protocolo común utilizado para la reconciliación de la información es el protocolo en cascada, propuesto en 1994. Este opera en varias rondas, con ambas claves divididas en bloques en cada ronda y comparando la paridad de esos bloques. Si se encuentra una diferencia en la paridad, entonces se realiza una búsqueda binaria para encontrar y corregir el error. Si se encuentra un error en un bloque de una ronda anterior que tenía la paridad correcta, entonces debe contenerse otro error en ese bloque; este error se encuentra y se corrige como antes. Este proceso se repite recursivamente.
                         Después de que se hayan comparado todos los bloques, Alice y Bob reordenan sus claves de la misma manera aleatoria, y comienza una nueva ronda. Al final de múltiples rondas, Alice y Bob tienen claves idénticas con alta probabilidad; sin embargo, Eva tiene información adicional sobre la clave debido a la información sobre la paridad intercambiada.
                         Últimamente, los turbocódigos, códigos LDPC y códigos polares se han utilizado para este propósito mejorando la eficiencia del protocolo en cascada.
                     </p>
-                    <h5>Amplificación de la privacidad</h5>
+                    <h5 id="ampli">Amplificación de la privacidad</h5>
                     <p>
                         La amplificación de la privacidad es un método para reducir y eliminar de manera efectiva la información parcial de Eva sobre la clave de Alice y Bob. Esta información parcial podría haberse obtenido tanto escuchando el canal cuántico durante la transmisión de la clave (introduciendo así errores detectables), como en el canal público durante la reconciliación de la información (donde se supone que Eva gana toda la información de paridad posible). La amplificación de privacidad utiliza la clave de Alice y Bob para producir una nueva clave más corta, de forma que Eva tenga una información insignificante sobre la nueva clave. Los bits de la clave pasan por un algoritmo que distribuye la ignorancia del espía sobre la clave final. De esta manera, la información del espía sobre la clave final puede hacerse arbitrariamente pequeña.
                         En primera aproximación, el tamaño de la clave final es igual al tamaño de la información compartida antes de la reconciliación, disminuido por el número de bits conocidos por el espía y disminuido por el número de bits que han pasado por el canal público durante la corrección de errores.
@@ -115,7 +146,7 @@
 
              </div>
 
-            <h3>Protocolo BB84</h3>
+            <h3 id="protoBB8">Protocolo BB84</h3>
             <p>
                 Este protocolo fue publicado en 1984 por Charles H. Bennett y Gilles Brassard, y con él se produce el nacimiento de la criptografía cuántica.
                 En este protocolo, la transmisión se logra utilizando fotones polarizados enviados entre el emisor (tradicionalmente de nombre Alice (en el lado A)) y el receptor (de nombre Bob (en el lado B)) mediante un canal cuántico, por ejemplo, una fibra óptica. Por otro lado, también se necesita la existencia de un canal público (no necesariamente cuántico) entre Alice y Bob, como por ejemplo Internet u ondas de radio, el cual se usa para mandar información requerida para la construcción la clave secreta compartida. Ninguno de los canales necesita ser seguro, es decir, se asume que un intruso (de nombre Eve) puede intervenirlos con el fin de obtener información.
@@ -142,7 +173,7 @@
                 <br>Quinto paso: Para codificar un mensaje se puede utilizar el mismo canal cuántico con fotones polarizados, o utilizar el canal público cifrando el mensaje con un algoritmo de cifrado, ya que la clave para el cifrado se ha transmitido de manera absolutamente segura.
             </p>
 
-            <h3>Protocolo B92</h3>
+            <h3 id="protoB92">Protocolo B92</h3>
             <p>
                 El protocolo B92 es un protocolo parecido al BB84. En este protocolo, se supone que Alice prepara un bit clásico aleatoriamente, a, y dependiendo del resultado envía a Bob el qubit:
             </p>
@@ -154,14 +185,14 @@
 
         </div>
        
-        <h2>Algoritmos en la criptografía cuántica</h2>
+        <h2 id="algoCripto">Algoritmos en la criptografía cuántica</h2>
         <p>
             Algoritmo de Shor: Fue propuesto por Peter Shor en el año 1994. Este algoritmo logró demostrar una reducción exponencial en el tiempo de cálculo para la realización de factorizaciones en número primos. Este algoritmo realiza los procesos en paralelo por ello las compuertas cuánticas son capaces de realizar un número determinado de cálculo en forma simultánea. Para la resolución de problemas este algoritmo emplea matemáticas asociadas a la teoría de números, el análisis de Fourier, números complejos, entre otros. Este algoritmo dejaría obsoleto a algoritmos como el RSA.
             <br> Algoritmo de Grover: Fue inventado por Lov K. Grover en 1996. Es un algoritmo de carácter probabilístico, por lo que produce la respuesta correcta con una determinada probabilidad de error, que, no obstante, puede obtenerse tan baja como se desee por medio de iteraciones. Este algoritmo tiene múltiples implementación entre ellas la criptografía, podría aplicar fuerza bruta a una clave criptográfica simétrica de 128 bits en aproximadamente 2^64 iteraciones, o una clave de 256 bits en aproximadamente 2^128 iteraciones, este puede no ser necesariamente el algoritmo más eficiente.
             <br> Algoritmo de Deutsch-Jozsa: Es un algoritmo cuántico determinista propuesto por David Deutsch y Richard Jozsa en 1992. Este algoritmo es de poco uso práctico actual, es uno de los primeros ejemplos de un algoritmo cuántico que es exponencialmente más rápido que cualquier posible algoritmo clásico determinista. Este proporciona una solución para un caso específico simple y devuelve una función booleana (Falso o Verdadero) por lo que se vuelve determinista comparando dos funciones.
         </p>
 
-        <h2>Algoritmos de encriptación</h2>
+        <h2 id = "algoEncripto">Algoritmos de encriptación</h2>
         <p>
             Para entender qué son los algoritmos de encriptación se desarrollará primero qué es y cómo funcionan. Se entiende como algoritmo para encriptación a una función matemática usada en los procesos de encriptación y desencriptación. Trabaja en combinación con una llave (un número, palabra, frase, o contraseña) para encriptar y desencriptar datos. Para encriptar, el algoritmo combina matemáticamente la información a proteger con una llave provista. El resultado de este cálculo son los datos encriptados. Para desencriptar, el algoritmo hace un cálculo combinando los datos encriptados con una llave provista, siendo el resultado de esta combinación los datos desencriptados (exactamente igual a como estaban antes de ser encriptados si se usó la misma llave). Si la llave o los datos son modificados el algoritmo produce un resultado diferente.
             Tenemos que estos algoritmos se dividen en tres tipos:
@@ -175,8 +206,8 @@
             Aprovechar las potencialidades de este tipo de computación requiere de la construcción de algoritmos cuánticos cuyo diseño está sujeto a las características matemáticas del problema a resolver (Gyongyosi and Imre, 2019). Uno de los primeros y más importantes hasta el momento es el algoritmo de Shor. Shor logró demostrar que su algoritmo reduce exponencialmente el tiempo necesario para la factorización de números y abrió el camino para el diseño de algoritmos cuánticos con aplicaciones en diferentes áreas del conocimiento.
         </p>
 
-        <h2>Implementación de la criptografía cuántica</h2>
-        <h3>Experimental</h3>
+        <h2 id="imple">Implementación de la criptografía cuántica</h2>
+        <h3 id="exp">Experimental</h3>
         <p>
             En el 2008 se consiguió el sistema de intercambio de bits más alto hasta el momento, con claves seguras a 1 Mbit/s, en más de 20 km de fibra óptica, y 10 kbit/s, en más de 100 km de fibra. Fue logrado mediante una colaboración entre la Universidad de Cambridge y Toshiba, utilizando el protocolo BB84.
             En agosto de 2015, la Universidad de Ginebra y Corning Inc. lograron la distancia de QKD más larga para fibra óptica (307 km). En el mismo experimento, se generó una tasa de intercambio de clave secreta de 12,7 kbit/s, convirtiéndola en la tasa de bits más alta para sistemas trabajando a distancias mayores de 100 km.
@@ -184,14 +215,18 @@
             También en junio de 2017, físicos chinos dirigidos por Pan Jianwei de la Universidad de Ciencia y Tecnología de China midieron fotones entrelazados a una distancia de 1203 km entre dos estaciones terrestres, sentando las bases para futuros experimentos intercontinentales de QKD. Más adelante en ese mismo año, el protocolo BB84 se implementó con éxito a través de enlaces de satélite desde Micius (que forma parte del proyecto chino de experimentos cuánticos a escala espacial, y que fue apodado así en honor al filósofo Mozi) a estaciones terrestres en China y Austria. Las claves se combinaron y el resultado se usó para transmitir imágenes y videos entre Pekín y Viena.
         </p>
 
-        <h3>Comercial</h3>
+        <h3 id="com">Comercial</h3>
         <p>
             Algunas compañías que ofrecen sistemas comerciales de distribución de claves cuánticas son: ID Quantique (Ginebra) o MagiQ Technologies, Inc. (Nueva York).
             En 2004, se llevó a cabo la primera transferencia bancaria del mundo utilizando QKD en Viena, Austria. La tecnología de cifrado cuántico proporcionada por la empresa suiza Id Quantique se utilizó en el cantón suizo de Ginebra para transmitir los resultados de la votación a la capital en las elecciones nacionales que tuvieron lugar el 21 de octubre de 2007.
         </p>
 
-        <h2>Referencias</h2>
-
+        <h2 id="refe">Referencias</h2>
+        <ul>
+            <li><a href="index.html">Computación Cuántica</a></li>
+            <li><a href="summit.html">Mecánica Cuántica</a></li>
+            <li> <a href="https://es.wikipedia.org/wiki/Criptograf%C3%ADa_cu%C3%A1ntica">Wikipedia</a></li>
+        </ul>
     </body>
 
 </html>
