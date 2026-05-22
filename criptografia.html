@@ -5,7 +5,7 @@
 
     <body>
         <h1>Criptografía cuántica</h1>
-        <img src = "C:\Users\Alumno\Documents\mi_wiki_Oggier\imagenes\Cripto - A, B, E.gif" alt="Diagrama" height="300">
+        <img src = "imagenes\Cripto - A, B, E.gif" alt="Diagrama" height="300">
         <p>
             La criptografía cuántica es la criptografía que utiliza principios de la mecánica cuántica para garantizar la absoluta confidencialidad de la información transmitida. La criptografía cuántica como idea se propuso en 1970, pero hasta 1984 no se publicó el primer protocolo.
             Una de las propiedades más importantes de la criptografía cuántica es que si un tercero intenta espiar durante la creación de la clave secreta, el proceso se altera detectándose al intruso antes de que se transmita información privada. Esto es consecuencia del teorema de no clonado.
@@ -80,11 +80,11 @@
                 El cifrado de la libreta de un solo uso es demostrablemente seguro. Consiste en emparejar el mensaje con una clave. La longitud de esta clave debe ser igual a la del mensaje, así cada bit del texto inicial se combina con otro bit de la clave realizando una suma modular.
                 Por ejemplo, se supone que se quiere enviar el mensaje “HOLA”. Para ello, a cada letra del abecedario se le adjudicará un número de 0 a 26 (“A” es 0, “B” es 1, etc). Si se quiere encriptar el mensaje, se necesita una clave con el mismo número de letras, por ejemplo “ZUMO”.
              </p>
-             <img src = "C:\Users\Alumno\Documents\mi_wiki_Oggier\imagenes\Ejemplo Cripto.png" alt = "Ejemplo mensaje cifrado" height="200">
+             <img src = "imagenes\Ejemplo Cripto.png" alt = "Ejemplo mensaje cifrado" height="200">
              <p>
                 Cada letra del mensaje se suma modularmente con la letra correspondiente de la clave, para asegurarnos de que el resultado de esta suma vuelve a ser un número entre 0 y 26 (es decir, una letra del abecedario). Por tanto, el mensaje que se envía en lugar de “HOLA” es “GIXO”. Con el mensaje cifrado en su poder, el receptor solo tiene que realizar el proceso inverso para descifrar el mensaje. Es decir, ahora hay que restar la clave al mensaje encriptado.
              </p>
-             <img src = "C:\Users\Alumno\Documents\mi_wiki_Oggier\imagenes\ejemplo des-cripto.png" alt = "Ejemplo desencriptación" height="200">
+             <img src = "imagenes\ejemplo des-cripto.png" alt = "Ejemplo desencriptación" height="200">
 
              <div>
                  <h3 id="protoGen">Protocolo general</h3>
@@ -163,7 +163,7 @@
                 Ambos descartan las mediciones (bits) en donde no coincidieron en las bases (en promedio se descarta la mitad de los bits). Los bits que quedaron fueron generados y medidos con la misma base, por lo que la polarización registrada es la misma para Alice y para Bob.
                 Hasta este paso, en una comunicación ideal, Alice y Bob ya tienen una clave secreta compartida determinada por los bits que quedaron.
             </p>
-            <img scr = "C:\Users\Alumno\Documents\mi_wiki_Oggier\imagenes\Bases A y B.png" alt = "Ilustración de los valores" height="200">
+            <img scr = "imagenes\Bases A y B.png" alt = "Ilustración de los valores" height="200">
             <p>
                 Cuarto paso: Dado que puede existir alguna impureza en el canal cuántico o, peor aún, un intruso pudo haber interceptado la transmisión de fotones, la polarización de los fotones pudo haber sido alterada por lo que Alice y Bob deben comprobar que efectivamente los bits que no fueron descartados coinciden en su valor.
                 Si un intruso intenta medir los fotones que mandó Alice, al igual que Bob no sabe con qué base se generaron, por lo que tiene que realizar sus mediciones usando bases al azar lo que inevitablemente introduciría una perturbación en los fotones enviados por Alice si es que no coinciden en la base. Tampoco podría generar los fotones originales de Alice ya que el teorema de no-clonación garantiza que es imposible reproducir (clonar) la información transmitida sin conocer de antemano el estado cuántico que describe la luz.
@@ -177,7 +177,7 @@
             <p>
                 El protocolo B92 es un protocolo parecido al BB84. En este protocolo, se supone que Alice prepara un bit clásico aleatoriamente, a, y dependiendo del resultado envía a Bob el qubit:
             </p>
-            <img scr = "C:\Users\Alumno\Documents\mi_wiki_Oggier\imagenes\Estado side.png" alt = "Base Z y X" height = "200">
+            <img scr = "imagenes\Estado side.png" alt = "Base Z y X" height = "200">
             <p>
                 De sus medidas, Bob obtiene el bit b, que puede tomar el valor 0 o 1, que corresponden a los estados -1 y +1 de las bases X y Z. Bob comunica el resultado b, pero manteniendo a' secreto. A continuación Alice y Bob seleccionan los bits en los que b=1, ya que b=0 solo si a=a' y b=1 ocurre si a'=1-a, y esto ocurre con una probabilidad del 50%. La clave final es a para Alice y 1-a' para Bob.
                 En este protocolo, como es imposible para un espía medir los estados de Alice sin romper la relación entre Alice y Bob, estos pueden crear una clave de bits y a la vez establecer un límite para el ruido y espionaje durante la comunicación.
