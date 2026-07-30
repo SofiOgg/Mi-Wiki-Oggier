@@ -1,49 +1,57 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 .pag {
     display: grid;
     height: 100%;
-    width: 100%;
+    width: 100%; /*pa que se adapte a la pantalla*/
 
     grid-template-columns: 2fr 7fr;
-    grid-template-rows: auto 1fr auto;
-    /*fraccionees o porcentajes del espacio que ocupan las áreas*/
+    grid-template-rows: auto 1fr auto; /*espacio que ocupan las áreas*/
 
     grid-template-areas: "Head Head"
-        "Ind Body"
-        "Foot Foot";
-    /*division de áreas*/
+                         "Ind Body"
+                         "Foot Foot"; /*division de áreas*/
 
-    gap: 10px;
-    background-color: white;
+    background-color: #f5f5f5;
 }
 
 .Head, .Ind, .Body, .Foot {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: rgb(53, 51, 51);
+    color: rgb(53, 51, 51); /*pa que quede más aestethic. Cosas de la fuente*/
 }
 
 .Head {
     grid-area: Head;
+
     font-size: 25px;
-    color: white;
+    color: white; /*sino no se ve en el fondo*/
+    padding-left:20px; /*borde izquierdo del texto*/
 
-    position: fixed;
+    position: fixed; /*siempre arribita del todo*/
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 0; /*fuerza a que quede siempre bien pegado a la ventana*/
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    width: 100%; /*ocupa todo el ancho de la pantalla*/
+    height:90px; /*fija la altura del encabezado*/
 
-    backdrop-filter: blur(12px);
+    display:flex;
+    align-items:center; /*permiten que el texto quede centrado verticalmente*/
 
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    z-index: 1000;
+    background-size: cover; /*hace que la imagen cubra todo el elemento.*/
+    background-position: center; /*qué parte mostrar en caso de recortes*/
+    background-repeat: no-repeat; /*pa no hacer copy-paste en caso de que sea chiquita*/
+    backdrop-filter: blur(12px); /*desenfoca lo que hay detrás del elemento (la imagen de fondo)*/
+
+    border-bottom: 1px solid rgba(0,0,0,0.05); /*agrega una línea debajo del encabezado.*/
+    z-index: 1000;/*determina que el header queda en la capa de más arriba, pudiendo estar adelante del body*/
 }
 
 .Ind {
     grid-area: Ind;
-    margin-top: 110px;
+    margin-top: 75px;
     padding: 20px;                  /* Espacio interno */
 
     background-color: #f5f5f5;
@@ -75,7 +83,7 @@
 
 
 .Body {
-    margin-top: 110px;
+    margin-top: 85px;
     grid-area: Body;
     padding: 0 30px; /* 30 px a izquierda y derecha */
 
@@ -101,11 +109,6 @@
 
 .Foot h2{
     margin-left: 0;
-}
-
-
-h1 {
-    margin-left: 20px;
 }
 
 h2, h3, h4, h5, h6 {
