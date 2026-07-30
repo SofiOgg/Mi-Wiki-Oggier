@@ -1,5 +1,6 @@
 .Head{
     background-image:
         linear-gradient(rgba(249,248,246,0.3), rgba(249,248,246,0.3)),
-        url("../imagenes/001010101.png");
+        url("../imagenes/comCua.jpg");
+    color:rgb(235, 235, 228)
 }

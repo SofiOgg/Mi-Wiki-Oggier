@@ -1,10 +1,4 @@
-okay, bien.
 
-Vamo a tener que:
-- Hacer un css por cada archivo, poniendo el fondo de cada uno.
-- Arreglar problemas del summit
-
-- Meter las clases en summit
 - Meter las clases en index
 
 - Arreglar imagenes summit
