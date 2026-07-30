@@ -31,10 +31,6 @@
     left: 0;
     width: 100%;
 
-    background-image:
-        linear-gradient(rgba(249,248,246,0.3), rgba(249,248,246,0.3)),
-        url("imagenes/001010101.png");
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -55,7 +51,6 @@
     border-right: 1px solid #d6d6d6;
     box-shadow: 2px 0 6px rgba(0, 0, 0, 0.05);
 }
-
 
 .Ind a:hover {
     color: #777;

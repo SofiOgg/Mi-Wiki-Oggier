@@ -1,0 +1,13 @@
+okay, bien.
+
+Vamo a tener que:
+- Hacer un css por cada archivo, poniendo el fondo de cada uno.
+- Arreglar el coso blanco gigante que está antes del header
+- Meter las clases en summit
+- Meter las clases en index
+- Ver que mrd pasa con las imagenes
+
+
+ background-image:
+        linear-gradient(rgba(249,248,246,0.3), rgba(249,248,246,0.3)),
+        url("imagenes/001010101.png");
