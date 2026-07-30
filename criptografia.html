@@ -2,7 +2,8 @@
 
 <head>
     <title id="cripto">Criptografía Cuántica</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cripto.css">
 </head>
 
 <body>
@@ -147,7 +148,7 @@
                     abecedario se le adjudicará un número de 0 a 26 (“A” es 0, “B” es 1, etc). Si se quiere encriptar el
                     mensaje, se necesita una clave con el mismo número de letras, por ejemplo “ZUMO”.
                 </p>
-                <img src="imagenes\Ejemplo Cripto.png" alt="Ejemplo mensaje cifrado" height="200">
+                <img src="imagenes/Ejemplo_Cripto.png" alt="Ejemplo mensaje cifrado" height="200">
                 <p>
                     Cada letra del mensaje se suma modularmente con la letra correspondiente de la clave, para
                     asegurarnos de que el resultado de esta suma vuelve a ser un número entre 0 y 26 (es decir, una
@@ -155,7 +156,7 @@
                     mensaje cifrado en su poder, el receptor solo tiene que realizar el proceso inverso para descifrar
                     el mensaje. Es decir, ahora hay que restar la clave al mensaje encriptado.
                 </p>
-                <img src="imagenes\ejemplo des-cripto.png" alt="Ejemplo desencriptación" height="200">
+                <img src="imagenes/ejemplo_des.cripto.png" alt="Ejemplo desencriptación" height="200">
 
                 <div>
                     <h3 id="protoGen">Protocolo general</h3>
@@ -338,7 +339,7 @@
                     Hasta este paso, en una comunicación ideal, Alice y Bob ya tienen una clave secreta compartida
                     determinada por los bits que quedaron.
                 </p>
-                <img scr="imagenes\Bases A y B.png" alt="Ilustración de los valores" height="200">
+                <img src="imagenes/Bases_A_B.png" alt="Ilustración de los valores" height="200">
                 <p>
                     Cuarto paso: Dado que puede existir alguna impureza en el canal cuántico o, peor aún, un intruso
                     pudo haber interceptado la transmisión de fotones, la polarización de los fotones pudo haber sido
@@ -368,7 +369,7 @@
                     El protocolo B92 es un protocolo parecido al BB84. En este protocolo, se supone que Alice prepara un
                     bit clásico aleatoriamente, a, y dependiendo del resultado envía a Bob el qubit:
                 </p>
-                <img scr="imagenes\Estado side.png" alt="Base Z y X" height="200">
+                <img src="imagenes/estadoSide.png" alt="Base Z y X" height="200">
                 <p>
                     De sus medidas, Bob obtiene el bit b, que puede tomar el valor 0 o 1, que corresponden a los estados
                     -1 y +1 de las bases X y Z. Bob comunica el resultado b, pero manteniendo a' secreto. A continuación
