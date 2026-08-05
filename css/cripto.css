@@ -1,5 +1,5 @@
 .Head{
     background-image:
-        linear-gradient(rgba(249,248,246,0.3), rgba(249,248,246,0.3)),
+        linear-gradient(rgba(249,248,246,0.3), rgba(249,248,246,0.3)), /*difuminado, ninguno*/
         url("../imagenes/001010101.png");
 }

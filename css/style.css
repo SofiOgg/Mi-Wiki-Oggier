@@ -8,7 +8,7 @@ html, body {
     height: 100%;
     width: 100%; /*pa que se adapte a la pantalla*/
 
-    grid-template-columns: 2fr 7fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-rows: auto 1fr auto; /*espacio que ocupan las áreas*/
 
     grid-template-areas: "Head Head"
@@ -39,7 +39,7 @@ html, body {
     align-items:center; /*permiten que el texto quede centrado verticalmente*/
 
     justify-content: space-between; /*separa el título y el logo*/
-    box-sizing: border-box; /* importante cuando usás width:100% + padding */
+    box-sizing: border-box; /*importante cuando se usa width al 100% + padding*/
 
     background-size: cover; /*hace que la imagen cubra todo el elemento.*/
     background-position: center; /*qué parte mostrar en caso de recortes*/
@@ -51,11 +51,12 @@ html, body {
 }
 
 .logo {
-    position: absolute;
+    position: absolute; /*saca el elemento del flujo normal de la página*/
     right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
     height: 70px;
+
+    top: 50%; 
+    transform: translateY(-50%); /*centran verticalemente el logo dentro del header*/
 }
 
 .Ind {
@@ -93,28 +94,28 @@ html, body {
 
 
 .Ind ul > li > a{
-    font-size: 22px;
-    font-weight: 700; /*grosor*/
+    font-size: 20px;
+    font-weight: 545; /*grosor lol*/
 }
 
 .Ind ul ul > li > a{
-    font-size: 20px;
-    font-weight: 550;
-}
-
-.Ind ul ul ul > li > a {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 500;
 }
 
-.Ind ul ul ul ul > li > a{
-    font-size: 16px;
+.Ind ul ul ul > li > a {
+    font-size: 15px;
     font-weight: 400;
 }
 
-.Ind ul ul ul ul ul > li > a{
+.Ind ul ul ul ul > li > a{
     font-size: 14px;
     font-weight: 300;
+}
+
+.Ind ul ul ul ul ul > li > a{
+    font-size: 12px;
+    font-weight: 200;
 }
 
 
@@ -123,7 +124,7 @@ html, body {
 .Body {
     margin-top: 85px;
     grid-area: Body;
-    padding: 0 30px; /* 30 px a izquierda y derecha */
+    padding: 0 30px; /*30 px a izquierda y derecha*/
 
     background-color: white; 
     box-shadow: 0 2px 8px rgba(0,0,0,.08);
@@ -152,7 +153,7 @@ html, body {
 
 .imagen {
     float: right;
-    margin: 25px 0 10px 20px;
+    margin: 25px 0 10px 20px; /*mete la img bien a la derecha, pero con cierto margen respecto al texto y demás*/
 }
 
 
@@ -168,7 +169,7 @@ ul {
 
 a {
     text-decoration: none; /*le saca el subrayado y eso*/
-    color: rgb(53, 51, 51); /* El mismo color que el resto lol. Sino, es azul*/
+    color: rgb(53, 51, 51); /*el mismo color que el resto lol. Sino, es azul*/
 }
 
 li {
