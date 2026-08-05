@@ -1,6 +1,6 @@
 html, body {
     margin: 0;
-    padding: 0;
+    padding: 0; /*NO SACAR. Pasan cosas raras*/
 }
 
 .pag {
@@ -15,11 +15,9 @@ html, body {
                          "Ind Body"
                          "Foot Foot"; /*division de áreas*/
 
-    background-color: #f5f5f5;
-}
+    background-color: #bbbbbb;
 
-.Head, .Ind, .Body, .Foot {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: sans-serif;
     color: rgb(53, 51, 51); /*pa que quede más aestethic. Cosas de la fuente*/
 }
 
@@ -40,13 +38,24 @@ html, body {
     display:flex;
     align-items:center; /*permiten que el texto quede centrado verticalmente*/
 
+    justify-content: space-between; /*separa el título y el logo*/
+    box-sizing: border-box; /* importante cuando usás width:100% + padding */
+
     background-size: cover; /*hace que la imagen cubra todo el elemento.*/
     background-position: center; /*qué parte mostrar en caso de recortes*/
     background-repeat: no-repeat; /*pa no hacer copy-paste en caso de que sea chiquita*/
     backdrop-filter: blur(12px); /*desenfoca lo que hay detrás del elemento (la imagen de fondo)*/
 
-    border-bottom: 1px solid rgba(0,0,0,0.05); /*agrega una línea debajo del encabezado.*/
-    z-index: 1000;/*determina que el header queda en la capa de más arriba, pudiendo estar adelante del body*/
+    border-bottom: 1px solid rgba(0,0,0,0.05); /*agrega una línea debajo del encabezado, medio transparentosa.*/
+    z-index: 1000;/*hace que el header quede en la capa de más arriba, pudiendo estar adelante del main*/
+}
+
+.logo {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 70px;
 }
 
 .Ind {
@@ -60,11 +69,12 @@ html, body {
 }
 
 .Ind a:hover {
-    color: #777;
+    color: #777; /*el hover es para que se ponga de este color cuando el mouse está arriba*/
 }
 
 .Ind > ul {
-    padding-left: 0; /*se hace tanto pa definir la indeltación de cada nivel de lista. No ta lindo el default*/
+    padding-left: 0; /*se hace tanto laburp pa definir la indeltación de cada nivel de lista. No ta lindo el default*/
+
 }
 
 .Ind ul ul {
@@ -72,11 +82,39 @@ html, body {
 }
 
 .Ind ul ul ul {
-    padding-left: 16px;
+    padding-left: 18px;
 }
 
 .Ind ul ul ul ul {
-    padding-left: 14px;
+    padding-left: 18px;
+}
+
+
+
+
+.Ind ul > li > a{
+    font-size: 22px;
+    font-weight: 700; /*grosor*/
+}
+
+.Ind ul ul > li > a{
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.Ind ul ul ul > li > a {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.Ind ul ul ul ul > li > a{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.Ind ul ul ul ul ul > li > a{
+    font-size: 14px;
+    font-weight: 300;
 }
 
 
@@ -87,7 +125,7 @@ html, body {
     grid-area: Body;
     padding: 0 30px; /* 30 px a izquierda y derecha */
 
-    background-color: #fafafa; 
+    background-color: white; 
     box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
 
@@ -104,12 +142,13 @@ html, body {
     text-align: center;
     color: #555;
     font-size: 14px;
+    text-decoration: underline;
 }
 
-.Foot h2{
-    margin-left: 0;
+.Foot ul{
+    display: flex;
+    justify-content: space-around; 
 }
-
 
 .imagen {
     float: right;
