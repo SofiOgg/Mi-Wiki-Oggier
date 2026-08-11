@@ -1,0 +1,180 @@
+html, body {
+    margin: 0;
+    padding: 0; /*NO SACAR. Pasan cosas raras*/
+}
+
+.pag {
+    display: grid;
+    height: 100%;
+    width: 100%; /*pa que se adapte a la pantalla*/
+
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto 1fr auto; /*espacio que ocupan las áreas*/
+
+    grid-template-areas: "Head Head"
+                         "Ind Body"
+                         "Foot Foot"; /*division de áreas*/
+
+    background-color: #bbbbbb;
+
+    font-family: sans-serif;
+    color: rgb(53, 51, 51); /*pa que quede más aestethic. Cosas de la fuente*/
+}
+
+.Head {
+    grid-area: Head;
+
+    font-size: 25px;
+    color: white; /*sino no se ve en el fondo*/
+    padding-left:20px; /*borde izquierdo del texto*/
+
+    position: fixed; /*siempre arribita del todo*/
+    top: 0;
+    left: 0; /*fuerza a que quede siempre bien pegado a la ventana*/
+
+    width: 100%; /*ocupa todo el ancho de la pantalla*/
+    height:90px; /*fija la altura del encabezado*/
+
+    display:flex;
+    align-items:center; /*permiten que el texto quede centrado verticalmente*/
+
+    justify-content: space-between; /*separa el título y el logo*/
+    box-sizing: border-box; /*importante cuando se usa width al 100% + padding*/
+
+    background-size: cover; /*hace que la imagen cubra todo el elemento.*/
+    background-position: center; /*qué parte mostrar en caso de recortes*/
+    background-repeat: no-repeat; /*pa no hacer copy-paste en caso de que sea chiquita*/
+    backdrop-filter: blur(12px); /*desenfoca lo que hay detrás del elemento (la imagen de fondo)*/
+
+    border-bottom: 1px solid rgba(0,0,0,0.05); /*agrega una línea debajo del encabezado, medio transparentosa.*/
+    z-index: 1000;/*hace que el header quede en la capa de más arriba, pudiendo estar adelante del main*/
+}
+
+.logo {
+    position: absolute; /*saca el elemento del flujo normal de la página*/
+    right: 20px;
+    height: 70px;
+
+    top: 50%; 
+    transform: translateY(-50%); /*centran verticalemente el logo dentro del header*/
+}
+
+.Ind {
+    grid-area: Ind;
+    margin-top: 75px;
+    padding: 20px;
+
+    background-color: #f5f5f5;
+    border-right: 1px solid #d6d6d6; /*agrega un borde a la derecha, pa separar del body*/
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.05); /*añade sombra, pa que sea más aestethic*/
+}
+
+.Ind a:hover {
+    color: #777; /*el hover es para que se ponga de este color cuando el mouse está arriba*/
+}
+
+.Ind > ul {
+    padding-left: 0; /*se hace tanto laburp pa definir la indeltación de cada nivel de lista. No ta lindo el default*/
+
+}
+
+.Ind ul ul {
+    padding-left: 18px;
+}
+
+.Ind ul ul ul {
+    padding-left: 18px;
+}
+
+.Ind ul ul ul ul {
+    padding-left: 18px;
+}
+
+
+
+
+.Ind ul > li > a{
+    font-size: 20px;
+    font-weight: 545; /*grosor lol*/
+}
+
+.Ind ul ul > li > a{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.Ind ul ul ul > li > a {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.Ind ul ul ul ul > li > a{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.Ind ul ul ul ul ul > li > a{
+    font-size: 12px;
+    font-weight: 200;
+}
+
+
+
+
+.Body {
+    margin-top: 85px;
+    grid-area: Body;
+    padding: 0 30px; /*30 px a izquierda y derecha*/
+
+    background-color: white; 
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+
+.Foot {
+    grid-area: Foot;
+
+    padding: 15px;
+    border-top: 1px solid rgba(0,0,0,.05);
+
+    background-color: rgba(249,248,246,.75);
+    backdrop-filter: blur(12px);
+
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+}
+
+.Foot ul{
+    display: flex;
+    justify-content: space-around; 
+}
+
+.imagen {
+    float: right;
+    margin: 25px 0 10px 20px; /*mete la img bien a la derecha, pero con cierto margen respecto al texto y demás*/
+}
+
+h2, h3, h4, h5, h6 {
+    margin-left: 40px;
+    scroll-margin-top: 110px; /*cierto margen al apretar los links*/
+}
+
+h2 {
+    border-bottom: 1px solid #b4b4b4;
+}
+
+ul {
+    list-style: none; /*saca los items*/
+    padding-left: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none; /*le saca el subrayado y eso*/
+    color: rgb(53, 51, 51); /*el mismo color que el resto lol. Sino, es azul*/
+}
+
+li {
+    margin: 12px 0;
+}
