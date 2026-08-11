@@ -143,7 +143,6 @@ html, body {
     text-align: center;
     color: #555;
     font-size: 14px;
-    text-decoration: underline;
 }
 
 .Foot ul{
@@ -156,9 +155,13 @@ html, body {
     margin: 25px 0 10px 20px; /*mete la img bien a la derecha, pero con cierto margen respecto al texto y demás*/
 }
 
-
 h2, h3, h4, h5, h6 {
     margin-left: 40px;
+    scroll-margin-top: 110px; /*cierto margen al apretar los links*/
+}
+
+h2 {
+    border-bottom: 1px solid #b4b4b4;
 }
 
 ul {
