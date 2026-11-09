@@ -125,6 +125,7 @@ html, body {
     margin-top: 85px;
     grid-area: Body;
     padding: 0 30px; /*30 px a izquierda y derecha*/
+    min-width: 0;
 
     background-color: white; 
     box-shadow: 0 2px 8px rgba(0,0,0,.08);
@@ -229,7 +230,7 @@ li {
     transition: all 0.2s ease;
 }
 
-/* === MODO OSCURO === */
+/*MODO OSCURO*/
 body.oscuro .pag {
     background-color: #121212;
     color: #e0e0e0;
@@ -264,20 +265,194 @@ body.oscuro .panel_apariencias button {
     border-color: #555555;
 }
 
-/* Botón de fuente act en modo oscuro */
+/* Botón de fuente act en modo oscuro*/
 body.oscuro .btn_fuente.activo {
     background-color: #8ab4f8;
     color: #121212;
 }
 
-
-
-/* === TAMAÑOS DE FUENTE === */
-
+/*FUENTES*/
 .Body.fuente_pequena {
     font-size: 0.85rem;
 }
 
 .Body.fuente_grande {
     font-size: 1.25rem;
+}
+
+
+
+
+/* === Apartado 6 === */
+.secc_art h2 { 
+    cursor: pointer; 
+    user-select: none; 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+} 
+
+/* Flecha por CSS*/ 
+.secc_art h2::before { 
+    content: "▾"; 
+    font-size: 0.85em; 
+    display: inline-block; 
+} 
+/* Flecha cuando la seccion está colapsada*/ 
+.secc_art.colapsada h2::before { 
+    content: "▸"; 
+} 
+
+/*Ocultar el cont colapsado*/ 
+.secc_art.colapsada > *:not(h2) { 
+    display: none; 
+}
+
+
+
+/* === Apartado 7 === */
+.secc_discusion { 
+    margin-top: 30px; 
+    padding-top: 20px; 
+    border-top: 2px solid #e0e0e0; 
+} 
+.campo_form { 
+    display: flex; 
+    flex-direction: column; 
+    margin-bottom: 12px; 
+} 
+.campo_form label { 
+    font-weight: bold; 
+    margin-bottom: 4px; 
+} 
+.campo_form input, .campo_form textarea { 
+    padding: 8px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-family: inherit; 
+    font-size: 0.95rem; 
+} 
+
+.contador { 
+    font-size: 0.85rem; 
+    color: #666; 
+    margin-top: 4px; 
+    text-align: right; 
+} 
+.contador.limite_excedido { 
+    color: #d93025; 
+    font-weight: bold; 
+} 
+
+/* Mensajes de error */ 
+.msj_error { 
+    color: #d93025; 
+    background-color: #fce8e6; 
+    padding: 8px 12px; 
+    border-radius: 4px; 
+    margin-bottom: 12px; 
+    font-size: 0.9rem; 
+    border: 1px solid #f5c2c7; 
+} 
+.oculto { 
+    display: none; 
+} 
+/*Error para los campos del formulario */ 
+.campo_form input.error, .campo_form textarea.error { 
+    border: 2px solid #d93025; 
+    outline: none; 
+}
+
+#btn_publicar { 
+    cursor: pointer; 
+    background-color: #106D8E; 
+    color: #ffffff; 
+    border: none; 
+    padding: 10px 16px; 
+    border-radius: 4px; 
+    font-weight: bold; 
+} 
+
+#btn_publicar:hover { 
+    background-color: #0d556e; 
+} 
+
+/* Estilos de la lista de comentarios */ 
+.cont_comentarios { 
+    margin-top: 25px; 
+} 
+#lista_comentarios { 
+    list-style: none; 
+    padding: 0; 
+    width: 100%; 
+    box-sizing: border-box;
+} 
+.item_comentario { 
+    background-color: #f9f9f9; 
+    border: 1px solid #e5e5e5; 
+    border-radius: 6px; 
+    padding: 12px; 
+    margin-bottom: 12px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 12px; 
+
+    width: 100%; 
+    box-sizing: border-box;
+} 
+
+.cuerpo_comentario p, .item_comentario { /*Pa que no se desborden las dimendiones y se pueda crtar una palabra*/
+    overflow-wrap: break-word; 
+    word-break: break-word; 
+}
+
+.cuerpo_comentario strong { 
+    color: #106D8E; 
+    display: block; 
+    margin-bottom: 5px; 
+} 
+
+.cuerpo_comentario p { 
+    margin: 0; line-height: 1.4; 
+} 
+.btn_eliminar { 
+    cursor: pointer; 
+    background-color: #d93025; 
+    color: #ffffff; 
+    border: none; 
+    padding: 5px 8px; 
+    border-radius: 4px; 
+    font-size: 0.8rem; 
+    flex-shrink: 0; 
+} 
+
+.btn_eliminar:hover {
+    background-color: #b3261e; 
+} 
+
+/* Compatibilidad con Modo Oscuro */ 
+body.oscuro .secc_discusion { 
+    border-top-color: #333333; 
+} 
+
+body.oscuro .campo_form input, body.oscuro .campo_form textarea { 
+    background-color: #242424; 
+    color: #e0e0e0; 
+    border-color: #444444; 
+} 
+body.oscuro .item_comentario { 
+    background-color: #242424; 
+    border-color: #383838; 
+} 
+body.oscuro .cuerpo_comentario strong { 
+    color: #8ab4f8; 
+} 
+body.oscuro .contador { 
+    color: #aaa; 
+} 
+body.oscuro .msj_error { 
+    background-color: #442726; 
+    border-color: #80302d; 
+    color: #f28b82; 
 }
