@@ -217,3 +217,61 @@ listaComentarios.addEventListener('click', function (evento) {
 // ==================================================
 // Cosas extras
 // ==================================================
+
+//BOTÓN VOLVER ARRIBA 
+const btnVolverArriba = document.querySelector('#btn_volver_arriba'); 
+if (btnVolverArriba) { 
+    //Mostrar o ocultar según la posición
+    window.addEventListener('scroll', function () { 
+        if (window.scrollY > 300) { 
+            btnVolverArriba.classList.add('visible'); 
+        } 
+        else { 
+            btnVolverArriba.classList.remove('visible'); 
+        } 
+    }); 
+    // Subir suavemente a la parte superior 
+    btnVolverArriba.addEventListener('click', function () { 
+        window.scrollTo({ 
+            top: 0, 
+            behavior: 'smooth' 
+        }); 
+    }); 
+}
+
+
+// Resaltar la seccion act en el ind
+
+// 1. Seleccionamos todos los encabezados y secciones con ID
+const elementosNavegables = document.querySelectorAll('main h2, main h3, main h4, main h5, main section[id]');
+
+window.addEventListener('scroll', function () {
+    let idActual = '';
+
+    // Punto de activación: a 1/3 de la altura de la ventana
+    const puntoActivacion = window.scrollY + (window.innerHeight / 3);
+
+    // 2. Buscar cuál es el último encabezado/sección superado por el scroll
+    elementosNavegables.forEach(function (elem) {
+        // Obtiene el ID del elemento o de su contenedor padre (para el caso de Discusión)
+        const idElem = elem.id || (elem.parentElement && elem.parentElement.id ? elem.parentElement.id : '');
+        
+        if (idElem && puntoActivacion >= elem.offsetTop) {
+            idActual = idElem;
+        }
+    });
+
+    // 3. Quitar la clase 'activo' de todos los enlaces del índice
+    const enlacesIndice = document.querySelectorAll('#lista_indice a');
+    enlacesIndice.forEach(function (enlace) {
+        enlace.classList.remove('activo');
+    });
+
+    // 4. Activar el enlace exacto (sea H2, H3, H4 o Discusión)
+    if (idActual) {
+        const enlaceActivo = document.querySelector(`#lista_indice a[href="#${idActual}"]`);
+        if (enlaceActivo) {
+            enlaceActivo.classList.add('activo');
+        }
+    }
+});
