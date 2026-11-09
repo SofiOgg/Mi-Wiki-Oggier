@@ -3,3 +3,20 @@
         linear-gradient(rgba(249,248,246,0.3), rgba(249,248,246,0.3)), /*difuminado, ninguno*/
         url("../imagenes/001010101.png");
 }
+
+.btn_volver_arriba, #btn_publicar { 
+    background-color: #2b4c7e; /* Color fondo*/ 
+    color: #ffffff; /* Color txt*/
+}
+
+#btn_publicar:hover, .btn_volver_arriba:hover { 
+    background-color: #1a3258; 
+} 
+
+#lista_indice a.activo{
+    color: #2b4c7e; 
+    border-left: 3px solid #2b4c7e; 
+}
+.cuerpo_comentario strong, body.oscuro .cuerpo_comentario strong { 
+    color: #2b4c7e;
+}

@@ -3,3 +3,21 @@
         linear-gradient(rgba(249,248,246,0.3), rgba(249,248,246,0.3)),
         url("../imagenes/entrelazamiento.png");
 }
+
+.btn_volver_arriba, #btn_publicar { 
+    background-color: #642b7e; /* Color fondo*/ 
+    color: #ffffff; /* Color txt*/
+}
+
+#btn_publicar:hover, .btn_volver_arriba:hover { 
+    background-color: #5b2b64; 
+} 
+
+#lista_indice a.activo{
+    color: #642b7e; 
+    border-left: 3px solid #642b7e;
+}
+
+.cuerpo_comentario strong, body.oscuro .cuerpo_comentario strong { 
+    color: #642b7e;
+}

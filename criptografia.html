@@ -109,14 +109,16 @@
                     y los estados que se utilizan para ser entrelazados o superpuestos entre sí son sus dos estados de
                     polarización, que es una de las características conocidas de la luz, aunque no sea directamente
                     perceptible.
-                    Un fotón puede ser polarizado artificialmente en una dirección en particular con respecto a su dirección
+                    Un fotón puede ser polarizado artificialmente en una dirección en particular con respecto a su
+                    dirección
                     de
                     desplazamiento. Dicha polarización puede ser detectada mediante el uso de filtros, orientados en el
                     mismo
-                    sentido en el que la luz fue polarizada. Estos filtros dejan pasar los fotones polarizados en un estado
+                    sentido en el que la luz fue polarizada. Estos filtros dejan pasar los fotones polarizados en un
+                    estado
                     y
                     absorben los polarizados en el otro.
-                    </p>
+                </p>
                 </p>
             </section>
 
@@ -539,22 +541,27 @@
                         Entre estos están el: MD5, DSA, SHA-1, entre otros.</li>
                 </ul>
                 <p>
-                Estos algoritmos poseen una desventaja en común, la cual es que todos los algoritmos criptográficos
-                mencionados anteriormente son vulnerables a los ataques de fuerza bruta (tratar sistemáticamente con
-                cada
-                posible clave de encriptación) buscando colisiones. La fuerza bruta es más fácil de aplicar en la medida
-                que
-                pasa el tiempo y nos referimos en la medida que pasa el tiempo al desarrollo de computadores cuánticos
-                los
-                cuales pueden explotar las vulnerabilidades con mayor facilidad.
-                Aprovechar las potencialidades de este tipo de computación requiere de la construcción de algoritmos
-                cuánticos cuyo diseño está sujeto a las características matemáticas del problema a resolver (Gyongyosi
-                and
-                Imre, 2019). Uno de los primeros y más importantes hasta el momento es el algoritmo de Shor. Shor logró
-                demostrar que su algoritmo reduce exponencialmente el tiempo necesario para la factorización de números
-                y
-                abrió el camino para el diseño de algoritmos cuánticos con aplicaciones en diferentes áreas del
-                conocimiento.
+                    Estos algoritmos poseen una desventaja en común, la cual es que todos los algoritmos criptográficos
+                    mencionados anteriormente son vulnerables a los ataques de fuerza bruta (tratar sistemáticamente con
+                    cada
+                    posible clave de encriptación) buscando colisiones. La fuerza bruta es más fácil de aplicar en la
+                    medida
+                    que
+                    pasa el tiempo y nos referimos en la medida que pasa el tiempo al desarrollo de computadores
+                    cuánticos
+                    los
+                    cuales pueden explotar las vulnerabilidades con mayor facilidad.
+                    Aprovechar las potencialidades de este tipo de computación requiere de la construcción de algoritmos
+                    cuánticos cuyo diseño está sujeto a las características matemáticas del problema a resolver
+                    (Gyongyosi
+                    and
+                    Imre, 2019). Uno de los primeros y más importantes hasta el momento es el algoritmo de Shor. Shor
+                    logró
+                    demostrar que su algoritmo reduce exponencialmente el tiempo necesario para la factorización de
+                    números
+                    y
+                    abrió el camino para el diseño de algoritmos cuánticos con aplicaciones en diferentes áreas del
+                    conocimiento.
                 </p>
                 </p>
             </section>
@@ -604,38 +611,38 @@
                     nacionales que tuvieron lugar el 21 de octubre de 2007.
                 </p>
             </section>
-        
 
-        <button id="btn_volver_arriba" class="btn_volver_arriba" type="button" aria-label="Volver arriba">↑</button>
 
-        <section id="discusion" class="secc_art secc_discusion">
-            <h2 id="discusion">Discusión</h2>
-            <div class="cont_secc">
-                <form id="form_comentarios" novalidate>
-                    <div class="campo_form">
-                        <label for="input_autor">Nombre:</label>
-                        <input type="text" id="input_autor" placeholder="Ingrese su nombre..." required>
+            <button id="btn_volver_arriba" class="btn_volver_arriba" type="button" aria-label="Volver arriba">↑</button>
+
+            <section id="discusion" class="secc_art secc_discusion">
+                <h2 id="discusion">Discusión</h2>
+                <div class="cont_secc">
+                    <form id="form_comentarios" novalidate>
+                        <div class="campo_form">
+                            <label for="input_autor">Nombre:</label>
+                            <input type="text" id="input_autor" placeholder="Ingrese su nombre..." required>
+                        </div>
+
+                        <div class="campo_form">
+                            <label for="input_comentario">Su comentario (entre 10 y 200 caracteres):</label>
+                            <textarea id="input_comentario" rows="4"
+                                placeholder="Deje su aporte sobre este tema..."></textarea>
+                            <p id="contador_caracteres" class="contador">0 / 200 caracteres</p>
+                        </div>
+
+                        <p id="msj_error" class="msj_error oculto"></p>
+                        <button type="submit" id="btn_publicar">Publicar comentario</button>
+                    </form>
+
+                    <!-- Seccion de otros comentarios -->
+                    <div class="cont_comentarios">
+                        <h3 id="com">Comentarios de la comunidad</h3>
+                        <ul id="lista_comentarios"> <!--Se insertan por js --> </ul>
                     </div>
-
-                    <div class="campo_form">
-                        <label for="input_comentario">Su comentario (entre 10 y 200 caracteres):</label>
-                        <textarea id="input_comentario" rows="4"
-                            placeholder="Deje su aporte sobre este tema..."></textarea>
-                        <p id="contador_caracteres" class="contador">0 / 200 caracteres</p>
-                    </div>
-
-                    <p id="msj_error" class="msj_error oculto"></p>
-                    <button type="submit" id="btn_publicar">Publicar comentario</button>
-                </form>
-
-                <!-- Seccion de otros comentarios -->
-                <div class="cont_comentarios">
-                    <h3>Comentarios de la comunidad</h3>
-                    <ul id="lista_comentarios"> <!--Se insertan por js --> </ul>
                 </div>
-            </div>
-        </section>
-</main>
+            </section>
+        </main>
 
 
 

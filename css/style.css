@@ -380,16 +380,10 @@ body.oscuro .btn_fuente.activo {
 
 #btn_publicar { 
     cursor: pointer; 
-    background-color: #106D8E; 
-    color: #ffffff; 
     border: none; 
     padding: 10px 16px; 
     border-radius: 4px; 
     font-weight: bold; 
-} 
-
-#btn_publicar:hover { 
-    background-color: #0d556e; 
 } 
 
 /* Estilos de la lista de comentarios */ 
@@ -423,7 +417,6 @@ body.oscuro .btn_fuente.activo {
 }
 
 .cuerpo_comentario strong { 
-    color: #106D8E; 
     display: block; 
     margin-bottom: 5px; 
 } 
@@ -460,9 +453,7 @@ body.oscuro .item_comentario {
     background-color: #242424; 
     border-color: #383838; 
 } 
-body.oscuro .cuerpo_comentario strong { 
-    color: #8ab4f8; 
-} 
+
 body.oscuro .contador { 
     color: #aaa; 
 } 
@@ -489,8 +480,6 @@ html {
     border-radius: 30px;
     
     font-weight: bold;
-    color: #ffffff;
-    background-color: #2b4c7e;
     border: none;
     
     cursor: pointer;
@@ -503,7 +492,6 @@ html {
 }
 
 .btn_volver_arriba:hover {
-    background-color: #1a3258;
     transform: translateY(-2px);
 }
 
@@ -513,10 +501,8 @@ html {
 }
 
 
-#lista\_indice a.activo { 
+#lista_indice a.activo { 
     font-weight: bold; 
-    color: #2b4c7e; 
-    border-left: 3px solid #2b4c7e; 
     padding-left: 6px; 
     transition: all 0.2s ease; 
 }

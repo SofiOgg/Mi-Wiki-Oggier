@@ -3,3 +3,21 @@
         linear-gradient(rgba(249,248,246,0.3), rgba(249,248,246,0.3)),
         url("../imagenes/comCua.jpg");
 }
+
+.btn_volver_arriba, #btn_publicar { 
+    background-color: #ae8929; /* Color fondo*/ 
+    color: #ffffff; /* Color txt*/
+}
+
+#btn_publicar:hover, .btn_volver_arriba:hover { 
+    background-color: #917121; 
+} 
+
+#lista_indice a.activo{
+    color: #ae8929; 
+    border-left: 3px solid #ae8929; 
+}
+
+.cuerpo_comentario strong, body.oscuro .cuerpo_comentario strong { 
+    color: #ae8929;
+}
