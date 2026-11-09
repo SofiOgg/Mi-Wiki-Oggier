@@ -178,3 +178,106 @@ a {
 li {
     margin: 12px 0;
 }
+
+
+/* === APARTADO 5 === */
+
+.panel_apariencias {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #d6d6d6;
+    border-bottom: 1px solid #b4b4b4;
+}
+
+.panel_apariencias button {
+    cursor: pointer;
+    padding: 5px 8px;
+    margin: 3px 2px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+/*Botón de tamaño act*/
+.btn_fuente.activo {
+    background-color: #353333;
+    color: #ffffff;
+    font-weight: bold;
+    border-color: #000000;
+}
+
+/*Botones*/
+.btn_fuente, .btn_modo{
+    flex: 1;
+    width: 100%;
+    padding: 8px 12px;
+
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #ced4da;
+    background-color: #ffffff;
+    color: #495057;
+
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+/* === MODO OSCURO === */
+body.oscuro .pag {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.oscuro .Ind {
+    background-color: #1e1e1e;
+    border-right-color: #333333;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.4);
+}
+
+body.oscuro .Body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.oscuro .Foot {
+    background-color: rgba(30, 30, 30, 0.85);
+    color: #aaaaaa;
+    border-top-color: #333333;
+}
+
+body.oscuro a {
+    color: #8ab4f8;
+}
+
+/*Botones EN modo oscuro*/
+body.oscuro .panel_apariencias button {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    border-color: #555555;
+}
+
+/* Botón de fuente act en modo oscuro */
+body.oscuro .btn_fuente.activo {
+    background-color: #8ab4f8;
+    color: #121212;
+}
+
+
+
+/* === TAMAÑOS DE FUENTE === */
+
+.Body.fuente_pequena {
+    font-size: 0.85rem;
+}
+
+.Body.fuente_grande {
+    font-size: 1.25rem;
+}
